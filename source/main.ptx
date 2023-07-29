@@ -1,0 +1,1244 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+
+    <!-- the other option is "long" which will produce an -->
+    <!-- entire front matter section with more headings   -->
+    <author-biographies length="short" />
+
+    <!--
+    <brandlogo url="http://abstract.pugetsound.edu" source="images/cover_aata_2014.png" />
+    -->
+
+    <!--
+    <covers front="images/original-front-cover-aata.pdf"
+            back="images/plain-back-cover-aata.pdf"/>
+    -->
+
+    <!-- Prefix to enhance Sage notebook contents -->
+    <!--
+    <initialism>AATA</initialism>
+    -->
+
+    <macros>
+        <!-- Operators     -->
+        \def\ann{\operatorname{ann}}
+        \newcommand{\Ass}{\operatorname{Ass}}
+        \def\Aut{\operatorname{Aut}}
+        \def\can{{\mathrm {can}}}
+        \def\char{\operatorname{char}}
+        \def\cp{\operatorname{CharPoly}}
+        \def\codim{\operatorname{codim}} 
+        \def\coker{\operatorname{coker}}
+        \DeclareMathOperator*{\colim}{colim} 
+        \def\cont{\operatorname{cont}} 
+        \def\diam{\operatorname{diam}} 
+        \def\dm{\operatorname{dim}} 
+        \DeclareMathOperator{\edim}{embdim} 
+        \def\End{\operatorname{End}} 
+        \def\eval{\operatorname{eval}} 
+        \def\Ext{\operatorname{Ext}} 
+        \def\Frac{\operatorname{Frac}}
+        \def\Fun{\operatorname{Fun}}
+        \def\Gal{\operatorname{Gal}}
+        \def\gcd{\operatorname{gcd}}
+        \newcommand{\GL}{\operatorname{GL}} 
+        \newcommand{\ht}{\operatorname{height}} 
+        \def\Hom{\operatorname{Hom}} 
+        \def\id{\operatorname{id}} 
+        \def\im{\operatorname{im}} 
+        \def\Inn{\operatorname{Inn}}
+        \def\ker{\operatorname{ker}}
+        \def\lcm{\operatorname{lcm}} 
+        \def\Mat{\operatorname{Mat}}
+        \newcommand{\Min}{\operatorname{Min}}
+        \def\mp{\operatorname{MinPoly}}
+        \def\mSpec{\operatorname{mSpec}}
+        \def\MSpec{\operatorname{MSpec}}
+        \def\null{\operatorname{Nul}}
+        \DeclareMathOperator{\ns}{nullspace}
+        \newcommand{\opp}{\operatorname{opp}}
+        \def\Orb{\operatorname{Orb}} 
+        \def\Out{\operatorname{Out}}
+        \def\Perm{\operatorname{Perm}}
+        \def\ptstab{\operatorname{PtStab}} 
+        \def\rad{\operatorname{rad}}
+        \DeclareMathOperator{\range}{range}
+        \def\rank{\operatorname{rank}}
+        \def\res{\operatorname{res}}
+        \def\setstab{\operatorname{SetStab}}
+        \def\sign{{\operatorname{sign}}}
+        \newcommand{\SL}{\operatorname{SL}}
+        \def\Span{\operatorname{Span}}
+        \def\Spec{\operatorname{Spec}}
+        \def\Stab{\operatorname{Stab}} 
+        \DeclareMathOperator{\Supp}{Supp}
+        \def\Syl{\operatorname{Syl}}
+        \def\Tor{\operatorname{Tor}}
+        \def\trace{\operatorname{trace}}
+        \def\uSpec{\operatorname{\underline{Spec}}}
+        <!-- Categories     -->
+        \newcommand{\Ob}{\mathrm{Ob}}
+        \newcommand{\Set}{\mathbf{Set}}
+        \newcommand{\Grp}{\mathbf{Grp}}
+        \newcommand{\Ab}{\mathbf{Ab}}
+        \newcommand{\Sgrp}{\mathbf{Sgrp}}
+        \newcommand{\Ring}{\mathbf{Ring}} 
+        \newcommand{\Fld}{\mathbf{Fld}}
+        \newcommand{\cRing}{\mathbf{cRing}}
+        \newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+        \newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+        \newcommand{\vs}[1]{#1-\mathbf{vect}}
+        \newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+        \newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+        \newcommand{\Top}{\mathbf{Top}} 
+        \newcommand{\Setp}{\mathbf{Set}_*} 
+        \newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+        \newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+        \newcommand{\PO}{\mathbf{PO}}
+        \newcommand{\Cont}{\mathrm{Cont}}
+        \newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+        \newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+        <!-- Greek     -->
+        \def\l{\lambda}
+        \def\lx{\lambda_x}
+        \newcommand{\a}{\alpha}
+        \def\b{\beta}
+        \def\d{\delta}
+        \def\e{\varepsilon}
+        \def\g{\gamma}
+        \def\t{\theta}
+        \def\s{\sigma}
+        \def\z{\zeta}
+        \def\vp{\varphi}
+        <!-- Letters     -->
+        <!-- MathBB     -->
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\B}{\mathbb{B}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\E}{\mathbb{E}}
+        \newcommand{\F}{\mathbb{F}}
+        \newcommand{\G}{\mathbb{G}}
+        \newcommand{\H}{\mathbb{H}}
+        \newcommand{\I}{\mathbb{I}}
+        \newcommand{\J}{\mathbb{J}}
+        \newcommand{\K}{\mathbb{K}}
+        \newcommand{\L}{\mathbb{L}} 
+        \newcommand{\M}{\mathbb{M}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\O}{\mathbb{O}}
+        \newcommand{\P}{\mathbb{P}}
+        \newcommand{\Q}{\mathbb{Q}} 
+        \newcommand{\R}{\mathbb{R}} 
+        \newcommand{\S}{\mathbb{S}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\U}{\mathbb{U}}
+        \newcommand{\V}{\mathbb{V}}
+        \newcommand{\W}{\mathbb{W}}
+        \newcommand{\X}{\mathbb{X}}
+        \newcommand{\Y}{\mathbb{Y}}
+        \newcommand{\Z}{\mathbb{Z}} 
+        \newcommand{\ON}{\mathbb{ON}}
+        <!-- MathCal     -->
+        \def\cA{\mathcal A} 
+        \def\cB{\mathcal B} 
+        \def\cC{\mathcal C} 
+        \def\cD{\mathcal D} 
+        \def\cE{\mathcal E} 
+        \def\cF{\mathcal F} 
+        \def\cG{\mathcal G} 
+        \def\cH{\mathcal H} 
+        \def\cI{\mathcal I} 
+        \def\cJ{\mathcal J} 
+        \def\cK{\mathcal K} 
+        \def\cL{\mathcal L}
+        \def\cM{\mathcal M} 
+        \def\cN{\mathcal N} 
+        \def\cO{\mathcal O} 
+        \def\cP{\mathcal P} 
+        \def\cQ{\mathcal Q} 
+        \def\cR{\mathcal R} 
+        \def\cS{\mathcal S} 
+        \def\cT{\mathcal T} 
+        \def\cU{\mathcal U} 
+        \def\cV{\mathcal V} 
+        \def\cW{\mathcal W} 
+        \def\cX{\mathcal X} 
+        \def\cY{\mathcal Y} 
+        \def\cZ{\mathcal Z} 
+        <!-- MathFrak     -->
+        \newcommand{\fa}{{\mathfrak a}} 
+        \newcommand{\fb}{{\mathfrak b}} 
+        \newcommand{\fc}{{\mathfrak c}} 
+        \newcommand{\fd}{{\mathfrak d}} 
+        \newcommand{\fe}{{\mathfrak e}}
+        \newcommand{\fm}{{\mathfrak m}} 
+        \newcommand{\fp}{{\mathfrak p}} 
+        \newcommand{\fq}{{\mathfrak q}} 
+        \newcommand{\fK}{{\mathfrak K}} 
+        \newcommand{\fR}{{\mathfrak R}} 
+        <!-- MathScr     -->
+        \def\sA{\mathscr A} 
+        \def\sB{\mathscr B} 
+        \def\sC{\mathscr C} 
+        \def\sD{\mathscr D} 
+        \def\sE{\mathscr E} 
+        \def\sF{\mathscr F} 
+        \def\sG{\mathscr G} 
+        \def\sH{\mathscr H} 
+        \def\sI{\mathscr I} 
+        \def\sJ{\mathscr J} 
+        \def\sK{\mathscr K} 
+        \def\sL{\mathscr L}
+        \def\sM{\mathscr M}
+        \def\sN{\mathscr N}
+        \def\sO{\mathscr O}
+        \def\sP{\mathscr P}
+        \def\sQ{\mathscr Q}
+        \def\sR{\mathscr R}
+        \def\sS{\mathscr S}
+        \def\sT{\mathscr T}
+        \def\sU{\mathscr U}
+        \def\sV{\mathscr V}
+        \def\sW{\mathscr W}
+        \def\sX{\mathscr X}
+        \def\sY{\mathscr Y}
+        \def\sZ{\mathscr Z}
+        <!-- Tildes     -->
+        \def\tS{\tilde{S}}
+        <!-- Algebra     -->
+        \def\sdp{\rtimes}
+        \newcommand{\tensor}{\otimes} 
+        \newcommand{\igen}[1]{\langle #1 \rangle} 
+        \def\nsg{\unlhd} 
+        \def\kval{{k-\mathrm{valued}}} 
+        \def\kalg{{k-\mathrm{alg}}}
+        \newcommand\GG[2]{\Gal(#1/#2)}
+        <!-- Matrices     -->
+        \newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+        \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+        \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+        \def\ob{{\mathfrak{ob}} }
+        <!-- Misc     -->
+        \def\qed{\square}
+        \def\sse{\subseteq}
+        \def\ss{\subset} 
+        \def\ssne{\subsetneq}
+        \def\sm{\setminus}
+        \def\inv{^{-1}} 
+        \newcommand{\es}{\emptyset} 
+        \newcommand{\Zm}[1]{\Z/({#1})} 
+        \def\ov#1{\overline{#1}} 
+        \def\xdots{x_1, \dots, x_n} 
+        \def\adots{a_1, \dots, a_n} 
+        \def\bdots{b_1, \dots, b_n} 
+        \def\udots{u_1, \dots, u_n} 
+        \newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+        \def\th{^{th}} 
+        \def\htpy{\simeq_{\mathrm{htpc}}} 
+        <!-- Math Text     -->
+        \def\textand{ \, \text{and} \, } 
+        \def\textor{ \, \text{or} \, } 
+        \def\textfor{ \, \text{for} \, } 
+        \def\textfa{ \, \text{for all} \, } 
+        \def\textst{ \, \text{such that} \, } 
+        \def\textin{ \, \text{in} \, } 
+        \def\fg{ \, \text{finitely generated} \, }
+        \newcommand{\op}{\mathrm{op}}
+        <!-- Arrows     -->
+        \newcommand{\xra}[1]{\xrightarrow{#1}} 
+        \newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+        \newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+        \newcommand{\xla}[1]{\xleftarrow{#1}} 
+        \def\lra{\longrightarrow}
+        \def\into{\hookrightarrow}
+        \def\onto{\twoheadrightarrow}
+        <!-- Vectors     -->
+        \newcommand{\vv}[1]{\mathbf{#1}}
+        \newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+        \renewcommand{\v}{\vv{v}}
+        \renewcommand{\u}{\vv{u}}
+        \newcommand{\w}{\vv{w}}
+        \newcommand{\x}{\vv{x}}
+        \renewcommand{\k}{\vv{k}}
+        \newcommand{\0}{\vv{0}}
+        \newcommand{\1}{\vv{1}}
+        \newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+        \newcommand{\us}[1][n]{\vecs{\u}{#1}}
+        \newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+        \newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+        \newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+        \newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+        \newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+        \newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+        \def\td{\tilde{\delta}}
+        \def\oo{\overline{\omega}}
+        \def\ctJ{\tilde{\mathcal J}}
+        \def\tPhi{\tilde{\Phi}}
+        \def\te{\tilde{e}}
+        \def\M{\operatorname{M}}
+        \newcommand{\homotopic}{\simeq}
+        \newcommand{\homeq}{\cong}
+        \newcommand{\iso}{\approx}
+        \newcommand{\dual}{\vee} 
+        \DeclarePairedDelimiter{\abs}{|}{|}
+        \newcommand{\bv}{{\bar{v}}}
+        \newcommand{\bu}{{\bar{u}}}
+        \newcommand{\bw}{{\bar{w}}}
+        \newcommand{\by}{{\bar{y}}}
+        \newcommand{\ba}{{\bar{a}}}
+        \newcommand{\bb}{{\bar{b}}}
+        \newcommand{\bx}{{\bar{x}}}
+        \DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+        \newcommand{\vx}{\underline{x}}
+        \renewcommand{mod}[1]{\text{(mod }{#1})}
+        \newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
+    </macros>
+
+    <!-- this is the default, but supresses a warning -->
+    <cross-references text="type-global" />
+
+    <!-- tikz package and libraries for images -->
+    <latex-image-preamble>
+      \usepackage{tikz}
+      \usetikzlibrary{backgrounds}
+      \usetikzlibrary{snakes}
+      \usepackage{tkz-graph}
+      \usepackage{tkz-euclide}
+      \usetikzlibrary{patterns}
+      \usetikzlibrary{positioning}
+      \usetikzlibrary{matrix,arrows}
+      \usetikzlibrary{calc}
+      \usetikzlibrary{shapes}
+      \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+      
+      \usepackage{pgfplots}
+    </latex-image-preamble>
+
+    <rename element="insight">Mark</rename>  
+    <rename element="investigation">Foreshadowing</rename>  
+    <rename element="inlineexercise">Exploration</rename>
+    <rename element="exploration">Discussion</rename>
+    <rename element="heuristic">Vague Semidefinition</rename>
+
+  </docinfo>
+
+  <book><title>Discrete Mathematics</title> 
+    <subtitle>Combinatorics, Codes, and Graphs</subtitle>
+
+    <frontmatter xml:id="frontmatter">
+
+      <titlepage>
+        <author>
+          <personname>Sam Macdonald</personname>
+          <department>Department of Mathematics</department>
+          <institution>University of Nebraska -- Lincoln</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+        <website>
+          <name>
+            <c>smakdonald.github</c>
+          </name>
+          <address>https://smakdonald.github.io/index.html</address>
+        </website>
+
+        <copyright>
+          <year>2020<ndash />2023</year>
+          <holder>Sam Macdonald</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+
+      <acknowledgement>
+        <p>
+          The content of this text is heavily based on the 850-851 sequence of courses offered in UNL, specificlly those taught during the 2020 academic year. 
+          I am very thankful to Audrey Goodnight for sharing their <em>.tex</em> files with me.
+        </p>
+
+        <p>
+          And, as always, I reserve a speical thank you for <url href="https://sites.google.com/willamette.edu/emcnicholas/home" visual="">Erin McNicholas</url> and <url href="https://willamette.edu/undergraduate/math/faculty/johnson/index.html" visual="">Inga Johnson</url> for forever tinting the world of mathematics purple.
+        </p>
+
+      </acknowledgement>
+
+      <preface><title>How to Use This Book</title>
+        <p>
+          I'm still in the process of figuring out exactly what this text is for. 
+          Some possibilities include:
+          <ul>
+            <li>
+              <p>
+                Future lecture notes for the hopeful possibility that one day I will teach a course over this material.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Current notes for students taking the first year discrete sequence. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Assistance in studying for the Discrete Qualifying Exam at UNL.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Clout.
+              </p>
+            </li>
+          </ul>
+        </p>
+
+        <paragraphs><title>Blocks</title>
+          <p>
+            Here are the types of environments you are likely to encounter throughout the text and what they are used for.
+            <ul>
+              <li><title><term>Definition</term></title>
+                <p></p>
+                <p>
+                  These are pretty standard and probably what you'd be expecting. 
+                  The building blocks of what we'll be working with. 
+                </p>
+              </li>
+
+              <li><title><term>Examples</term></title>
+                <p></p>
+                <p>
+                  Specific instances of a definition.
+                  For example, the empty set, <m>\emptyset</m> is an example of a set, and thus would be contained within an <q>example</q> environment.
+                  At some point the line between example and definition becomes incoherently blurred, but I have done my best to keep things consistent.
+                </p>
+              </li>
+
+              <li><title><term>Theorem</term></title>
+                <p></p>
+                <p>
+                  A result. 
+                </p>
+              </li>
+
+              <li><title><term>Lemma</term></title>
+                <p></p>
+                <p>
+                  A true mathematical statement that was proven mainly to help in the proof of some theorem. 
+                </p>
+              </li>
+
+              <li><title><term>Corollary</term></title>
+                <p></p>
+                <p>
+                  An important result whose proof comes directly from a previous theorem.
+                </p>
+              </li>
+
+              <li><title><term>Proposition</term></title>
+                <p></p>
+                <p>
+                  Results that require proof but are more specific and/or contained in a larger result coming later.
+                </p>
+              </li>
+
+              <li><title><term>Exploration</term></title>
+                <p></p>
+                <p>
+                  Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped. 
+                </p>
+              </li>
+
+              <li><title><term>Problem</term></title>
+                <p></p>
+                <p>
+                  Used for qualifying exam problems.
+                </p>
+              </li>
+
+              <li><title><term>Remark</term></title>
+                <p></p>
+                <p>
+                  Providing context in the form of foreshadowing or content not covered in this text.
+                  In general, there shouldn't be anything defined in a remark, they should be entirely optional. 
+                </p>
+              </li>
+
+              <li><title><term>Convention</term></title>
+                <p></p>
+                <p>
+                  
+                </p>
+              </li>
+
+              <li><title><term>Discussion</term></title>
+                <p></p>
+                <p>
+                  Usually for arguing about notation.
+                </p>
+              </li>
+
+              <li><title><term>Footnotes</term></title>
+                <p></p>
+                <p>
+                  Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense.<fn>It should really be <q>feetnote</q> if you think about it.</fn> 
+                </p>
+              </li>
+            </ul>
+          </p>
+          
+        </paragraphs>
+
+      </preface>
+
+    </frontmatter>
+
+    <part xml:id="part-combinatorics-codes"><title>Combinatorics and Codes</title>
+
+      <chapter xml:id="chapter-title"><title>Chapter 1</title>
+
+        <section xml:id="sec-counting"><title>Basic Counting Principles</title>
+
+          <p>
+            In this course we will focus on combinatorial reasoning and arguments. Often we are interested in the number of elements in a particular set. Enumeration techniques allow us to count efficiently, rather than simply listing out the elements and counting them brute-force. Today we will start by reviewing basic counting principles.
+          </p>
+
+          <definition xml:id="def-partition">
+            <statement>
+              <p>
+                A <term>partition</term> of a finite set <m>A</m> is a collection of disjoint nonempty sets <m>A_1,\dots, A_k</m> whose union is <m>A</m>: <me>A=\cup_{i=1}^k A_i.</me>
+              </p>
+            </statement>
+          </definition>
+
+          <theorem xml:id="thm-sum"><title>Sum Principle (Counting by cases)</title>
+            <statement>
+              <p>
+                If <m>A</m> is a finite set, and <m>A</m> is partitioned into sets <m>B_1,\dots,B_k</m> then <me>\left|{A}\right|=\sum_{i=1}^k\left|{B_i}\right|.</me>
+              </p>
+            </statement>
+          </theorem>
+
+          <theorem xml:id="thm-product"><title>roduct Principle (Counting by stages)</title>
+            <statement>
+              <p>
+                If elements of <m>A</m> are formed by a series of <m>k</m> choices where there are <m>n_i</m> options for the <m>i^{\text{th}}</m> choice, regardless of previous choices made, then <me>\left|{A}\right|=\prod_{i=1}^k n_i.</me>
+              </p>
+            </statement>
+          </theorem>
+
+          <remark>
+            <p>
+              The particular options available at the <m>i^{\text{th}}</m> choice may depend on previous choices, but the number of options is the same at that step
+            </p>
+          </remark>
+
+          <example>
+            <statement>
+              <p>
+                <ul>
+                  <li>
+                    <p>
+                      Cartesian product <m>A \times B=\{(a,b)\,:\, a\in A, b\in B\}</m> 
+                      <me>
+                        \left|{A\times B}\right|=\left|{A}\right|\cdot\left|{B}\right|.
+                      </me> 
+                      There are <m>\left|{A}\right|</m> ways to select <q><m>a</m></q> and for each choice there are <m>\left|{B}\right|</m> ways to select <q><m>b</m>.</q>
+                    </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                      A pair of distinguishable dice (say red and blue) is rolled. 
+                      Let <m>S</m> be the set of possible outcomes that have the same parity. 
+                      Find <m>|S|</m>. 
+                      Denote an outcome by <m>(r,b)</m> where <m>r</m> is the number of red die, <m>b</m> is the number of blue die. 
+                      <me>
+                        \begin{aligned}
+                              \left|{S}\right|
+                              &amp;= \text{(number of ways } r,b\text{ both even)} + \text{(number of ways } r,b\text{ both odd)}\\
+                              &amp;=3\cdot 3+ 3\cdot 3\\
+                              &amp;=18
+                          \end{aligned}
+                      </me> 
+                      Above uses sum principle then product principle for each term.
+                    </p>
+                  
+                    <p>
+                      Could also use product principle directly: 
+                      <me>
+                        \left|{S}\right|=6\cdot 3=18
+                      </me> 
+                      since 6 ways to have <q><m>r</m>,</q> once <m>r</m> chosen parity determined and 3 ways to select <q><m>b</m>.</q>
+                    </p>
+                  </li>
+                </ul>
+              </p>
+            </statement>
+          </example>
+
+          <p>
+            A simple but powerful tool is <term>counting two ways</term>. We can prove identities or show that two formulas are equal if we can show that each one counts the size of the same set. Usually the hard part is determining which set each side is counting.
+          </p>
+
+          <fact xml:id="fact-two-ways"><title>Counting Two Ways</title>
+            <statement>
+              <p>
+                When two formulas count the same set, their values are equal.
+              </p>
+            </statement>
+          </fact>
+
+          <example>
+            <statement>
+              <p>
+                By counting two ways, show that <me>\sum_{i=1}^{n-1} i = \frac{n(n-1)}{2}.</me> Let <m>[n]</m> denote the set <m>\{1,2,3,\ldots, n\}</m>. We will show that each side counts the number of unordered pairs of elements from <m>[n]</m>.
+              </p>
+            </statement>
+
+            <solution>
+              <p>
+                RHS counts using product principle: there are <m>n</m> choices fro the first element in the pair, and then <m>n-1</m> choices for the second element. Since we chose elements in order and want an unordered pair, we must divide by 2 to undo overcounting.
+              </p>
+
+              <p>
+                LHS counts using sum principle: Partition the pairs according to the largest element in the pair. If <m>i+1</m> is largest, there are <m>i</m> choices for the other element.
+              </p>
+            </solution>
+          </example>
+
+          <p>
+            As a counting technique, we can compute the size of a set <m>A</m> by establishing a bijection from <m>A</m> to a set <m>B</m> whose size is known. Recall that a function <m>f: A \rightarrow B</m> is a <term>bijection</term> if for every <m>b\in B</m> there is exactly one <m>x\in A</m> such that <m>f(x)=b</m>.
+          </p>
+
+          <theorem xml:id="thm-bijection"><title>Bijection Principle</title>
+            <statement>
+              <p>
+                If there is a bijection from one set to another, then the two sets have the same size.
+              </p>
+            </statement>
+          </theorem>
+
+          <example>
+            <statement>
+              <p>
+                Show that the number of <m>0,1</m>-lists of length <m>n</m> equals the number of subsets of <m>[n]</m>.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Define <m>f:A\rightarrow B</m> as follows:
+              </p>
+
+              <p><ul>
+                <li>
+                  <p>
+                Let <m>S\in A</m> so <m>S</m> is a subset of <m>[n]</m>.
+              </p>
+                </li>
+
+                <li>
+                  <p>
+                <m>f(S)=s_1s_2\cdots s_n</m> where <m>s_i=1</m> if <m>i\in S,s_i=0</m> if <m>s_i\notin S</m> (so <m>f(s)</m> is the
+              </p>
+
+              <p>
+                <term>incidence vector</term> of <m>S</m>).
+              </p>
+                </li>
+
+                <li>
+                  <p>
+                Now, given any list <m>b_1\cdots b_n\in B</m>, it is the image of the set <m>\{i\,:\, b_i=1\}</m>. Any two lists that are identical are from the same set.
+              </p>
+                </li>
+
+              </ul></p>
+
+              <p>
+                So the map <m>f</m> is a bijection.
+              </p>
+            </solution>
+          </example>
+
+          <remark>
+            <p>
+              Also note <m>\left|{A}\right|=\left|{B}\right|=2^n</m> (by product principle).
+            </p>
+          </remark>
+
+          <p>
+            Often the bijection principle or counting two ways is used in a combinatorial proof. The next principle is also a useful tool in many arguments. The idea is that in any set of numbers, there is an element that is at least as large as the average.
+          </p>
+
+          <theorem xml:id="thm-pigeon"><title>Pigeonhole Principle</title>
+            <statement>
+              <p>
+                If more than <m>kn</m> objects are placed in <m>k</m> boxes, then there is some box that contains more than <m>n</m> objects.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Suppose not. If there are at most <m>n</m> objects per box, then there at most <m>kn</m> objects.
+              </p>
+            </proof>
+          </theorem>
+
+          <p>
+            The Pigeonhole Principle generalizes as follows to classes that have quotas. Let <m>p_i</m> denote the quota for items in class <m>i</m>.
+          </p>
+
+          <theorem xml:id="thm-general-pigeon"><title>Pigeonhole Principle Generalized</title>
+            <statement>
+              <p>
+                If <m>(\sum_{i=1}^kp_i)-k+1</m> objects are partitioned into <m>k</m> classes, with quotas <m>\{p_i\}</m>, then some class meets its quota.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                If not, there are at most <m>(\sum_{i=1}^kp_i-1)</m> objects placed.
+              </p>
+            </proof>
+          </theorem>
+
+          <example>
+            <statement>
+              <p>
+                Show that within any set of at least two people, there are always two people who have the same number of acquaintances.
+              </p>
+            </statement>
+            <solution>
+              <p>
+                Let <m>n</m> be the number of people. Assume acquaintance relation is symmetric. The possible number of acquaintances any person can have is in <m>\{0,\dots,n-1\}</m>, which has <m>n</m> elements. Observe that not both of <m>0</m> and <m>n-1</m> may be used simultaneously within the same set of people. Thus, there are <m>n</m> people and <m>n-1</m> choices of acquaintance numbers (either <m>\{0,\dots,n-2\}</m> or <m>\{1,\dots,n-1\}</m>). So by PP, some two people have the same number.
+              </p>
+            </solution>
+          </example>
+        
+        </section>
+
+        <section xml:id="sec-perm-comb"><title>Permutations and Combinations</title>
+
+          <p>
+            We will now look at how to count selections taken in order or without order.
+          </p>
+
+          <definition xml:id="def-factorial">
+            <statement>
+              <p>
+                First some notation. For a natural number <m>n</m>, define
+                <ul>
+                  <li>
+                    <p>
+                  <term><m>n</m> factorial</term> <me>n!=(n)(n-1)(n-2)\cdots 3\cdot 2\cdot 1=\prod_{i=0}^{n-1}(n-i).</me>
+                </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  <term>falling factorial</term> <me>n_{(k)}=\prod_{i=0}^{k-1}(n-i)=(n)(n-1)(n-2)\cdots(n-k+1)</me> (<m>k</m> terms).
+                </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  <term>rising factorial</term> <me>n^{(k)}=\prod_{i=0}^{k-1}(n+i)=(n)(n+1)(n+2)\cdots(n+k-1)</me> (<m>k</m> terms).
+                </p>
+                  </li>
+              
+                </ul>
+              </p>
+            </statement>
+          </definition>
+
+          <p>
+            There are four main cases for choosing <m>k</m> items from a set of <m>n</m> elements, depending on whether the items are ordered or not ordered, or chosen with repetition or without repetition.
+          </p>
+
+          <definition xml:id="def-permutation">
+            <statement>
+              <p>
+                Let <m>S</m> be a set of <m>n</m> elements.
+                <ul>
+                  <li>
+                    <p>
+                  A <term><m>k</m>-set</term> in <m>S</m> is a subset of <m>S</m> with <m>k</m> distinct elements.
+                </p>
+              
+                <p><ul>
+                  <li>
+                    <p>
+                  The number of <m>k</m>-sets will be denoted <m>\binom{n}{k}</m> <q><m>n</m> choose <m>k</m>.</q>
+                </p>
+              
+                <p>
+                  <m>\binom{n}{k}</m> is the number of ways to select <m>k</m> items from <m>n</m> without order.
+                </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  <m>k</m>-sets are sometimes called combinations.
+                </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  Observe that <m>\binom{n}{k} = 0</m> unless <m>0 \leq k \leq n</m> (by combinatorial defn).
+                </p>
+                  </li>
+              
+                </ul></p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  A <term>multiset</term> from <m>S</m> is a selection of elements from <m>S</m> where repetition is allowed.
+                </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  A <term>word of length <m>k</m></term> from <m>S</m> is a list of <m>k</m> elements from <m>S</m>. <m>S</m> is the <q>alphabet.</q> (order matters, repetition is allowed)
+                </p>
+                  </li>
+              
+                  <li>
+                    <p>
+                  A word is <term>simple</term> if elements/letters are distinct.
+                </p>
+              
+                <p><ul>
+                  <li>
+                    <p>
+                  A simple word of length <m>n</m> from <m>S</m> is called a <term>permutation</term> (order matters, no repetition)
+                </p>
+                  </li>
+              
+                </ul>
+              </p>
+            </li>
+        
+          </ul>
+              </p>
+            </statement>
+          </definition>
+
+          <p>
+            We will now look at how to count each of these types of sets/words. Often parts of counting problems can be cast as one of these main types, so words and subsets are useful models for counting.
+          </p>
+
+          <proposition xml:id="prop-k-rep"><title>Counting <m>k</m>-words with repetition</title>
+            <statement>
+              <p>
+                The number of words of length <m>k</m> from an alphabet of <m>n</m> elements is <m>n^k</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                By product principle, there are <m>n</m> choices for each of the <m>k</m> positions, so there are <m>n^k</m> words.
+              </p>
+            </proof>
+          </proposition>
+
+          <proposition xml:id="prop-k-no-rep"><title>Counting <m>k</m>-words without repetition</title>
+            <statement>
+              <p>
+                The number of simple words of length <m>k</m> from an alphabet of <m>n</m> elements is <m>n_{(k)}</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                Elements may not repeat in the word. There are <m>n</m> choices for position 1, <m>n-1</m> choices for position 2, etc. In general, <m>n+1-i</m> choices for position <m>i</m>. So word may be formed in <me>\prod_{i=1}^{k}(n-i+1)=n_{(k)}</me> ways.
+              </p>
+            </proof>
+          </proposition>
+
+          <proposition xml:id="prop-k-set"><title>Counting <m>k</m>-sets (i.e. no repetition)</title>
+            <statement>
+              <p>
+                The number <m>\binom{n}{k}</m> of <m>k</m>-sets of an <m>n</m>-set is <me>\binom{n}{k}=\frac{n!}{k!(n-k)!}=\frac{n_{(k)}}{k!}.</me>
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                We will count the simple <m>k</m>-words in two ways. From above, there are <m>n_{(k)}</m> simple words from <m>[n]</m>. Alternatively, we can form a simple <m>k</m>-word by first choosing the elements from <m>[n]</m>, and then permute them. This gives <m>\binom{n}{k}k!</m> possible simple <m>k</m>-words. Thus <me>\binom{n}{k}k!=n_{(k)}\implies \binom{n}{k}=\frac{n_{(k)}}{k!}.</me>
+              </p>
+            </proof>
+          </proposition>
+
+          <p>
+            Observe that for a fixed <m>k</m>, <m>\binom{n}{k}</m> is a polynomial of degree <m>k</m>. (Later we’ll extend the definition to real-valued <m>n</m>, but the combinatorial meaning will be lost.)
+          </p>
+
+          <fact xml:id="fact-mutlisets"><title>Counting multisets (i.e. repetition)</title>
+            <statement>
+              <p>
+                First observe that a multiset of <m>k</m> elements from an <m>n</m>-element set may be viewed as a choice of <m>k</m> objects from a set of <m>n</m> object types, where each object type occurs in unlimited supply.
+              </p>
+
+              <p>
+                A multiset is therefore determined by the multiplicities of each type chosen.
+              </p>
+            </statement>
+          </fact>
+
+          <example>
+            <statement>
+              <p>
+                A 7-multiset of <m>\{a,b,c,d,e\}</m> could be <m>\{a,a,a,c,d,d,e\}</m> which may be written <m>\{3\cdot a,c,2\cdot d, e\}</m> so repetition numbers are <m>3,0,1,2,1</m>, respectively.
+              </p>
+            </statement>
+          </example>
+
+          <remark>
+            <p>
+              The number of <m>k</m>-element multisets from <m>[n]</m> is the same as the number of nonegative integer solutions to <m>x_1+\cdots+x_n=k</m> where <m>x_i</m> is the number of copies of element <m>i</m> chosen for the multiset.
+            </p>
+          </remark>
+
+          <theorem xml:id="thm-num-multisets">
+            <statement>
+              <p>
+                The number of <m>k</m>-element multisets from <m>[n]</m> is <m>\binom{k+n-1}{n-1}</m>.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                From above, the number of <m>k</m>-element multisets from <m>[n]</m> is equivalent to the number of solutions to <m>\sum_{i = 1}^n x_i = k</m> in nonnegative integers. We proceed by establishing a bijection from the set of these solutions to the number of lists of <m>k</m> stars and <m>n-1</m> bars.
+              </p>
+
+              <p>
+                We can represent each solution of <m>x_1+\cdots+x_n=k</m> as a list of <m>x_1+\cdots+x_n=k</m> stars, where after <m>x_1</m> stars we place a bar, then <m>x_2</m> stars, then bar, <m>x_3</m> stars, etc. Given such a list, we can read off the values of <m>x_i</m>, since <m>x_i</m> will be the number of stars between the <m>(i-1)^{\text{th}}</m> bar and the <m>i^{\text{th}}</m> bar (assuming 0 bar and <m>n^{\text{th}}</m> bar at ends).
+              </p>
+
+              <p>
+                This gives a bijection between solutions <m>x_1,\dots,x_n</m> and star/bar lists of length <m>k+n-1</m> with <m>n-1</m> bars.
+              </p>
+
+              <p>
+                Thus, the number of solutions is <m>=\binom{k+n-1}{n-1}</m> since there are this many ways to choose <m>n-1</m> positions for the bars.
+              </p>
+            </proof>
+          </theorem>
+
+          <example>
+            <statement>
+              <p>
+                <m>\binom{7+5-1}{5-1}=\binom{11}{4}</m> is number of solutions to <m>x_1+x_2+x_3+x_4+x_5=7</m> <me>\star\star\star||\star|\star\star|\star</me> corresponds to solution <m>3+0+1+2+1</m>
+              </p>
+            </statement>
+          </example>
+
+          <p>
+            We can restrict the variables in the integer sum problem to be positive. Doing this leads to another useful counting model called a composition.
+          </p>
+          
+          <definition xml:id="def-composition">
+            <statement>
+              <p>
+                A <term>composition</term> of the positive integer <m>k</m> is a list of positive integers summing to <m>k</m>. The entries in the list are called <term>parts</term>.
+              </p>
+            </statement>
+          </definition>
+
+          <corollary xml:id="cor-num-comp">
+            <statement>
+              <p>
+                There are <m>\binom{k-1}{n-1}</m> compositions of <m>k</m> with <m>n</m> parts.
+              </p>
+            </statement>
+
+            <proof>
+              <p>
+                <ol>
+                  <li>
+                    <p>
+                      We convert the problem to the case of counting solutions in nonnegative integers.
+                    </p>
+
+                    <p>
+                      Consider <m>x_1+\cdots+x_n=k</m> where <m>x_i&gt;0</m>. Now let <m>y_i=x_i-1</m> for <m>i=1,\dots,n</m>. So <m>y_i\geq 0</m>. The solutions to <m>\sum_{i=1}^n x_i=k</m> corresponds to solutions of <m>\sum_{i=1}^n y_i=k-n</m> in nonnegative integers.
+                    </p>
+
+                    <p>
+                      (To see this, <m>\sum_{i=1}^n x_i=\sum_{i=1}^n (y_i+1)=k</m> so <m>x_1,\dots,x_n</m> is a solution for <m>\sum_{i=1}^n y_i=k-n</m>.)
+                    </p>
+
+                    <p>
+                      There are <m>\binom{k-n+n-1}{n-1}</m> such solutions, which is <m>\binom{k-1}{n-1}</m>.
+                    </p>
+                  </li>
+
+                  <li>
+                    <p>
+                      Use stars and bars.
+                    </p>
+
+                    <p>
+                      The number of solutions in positive integers corresponds to an arrangement of <m>k</m> stars and <m>n-1</m> bars where no two bars can occur consecutively. Place the <m>k</m> stars. There are <m>k-1</m> positions between the stars where bars may be placed. So the number of arrangements is <m>\binom{k-1}{n-1}</m>
+                    </p>
+                  </li>
+                </ol>
+              </p>
+            </proof>
+          </corollary>
+
+          <example>
+            <statement>
+              <p>
+                A solution to <m>x_1+x_2+x_3+x_4+x_5=7</m> in positive integers corresponds to <m>y_1+y_2+y_3+y_4+y_5=2</m> in nonnegative integers (you’re just deciding where to put the extra two 1s).
+              </p>
+            </statement>
+          </example>
+          
+        </section>
+
+        <section xml:id="sec-binomial"><title>Binomial Theorem and Identities</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section xml:id="sec-paths"><title>Paths</title>
+            
+          <subsection xml:id="subsec-lattice-paths"><title>Lattice Paths</title>
+
+            <p>
+              
+            </p>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-delannoy-paths"><title>Delannoy Paths</title>
+
+            <p>
+              
+            </p>
+            
+          </subsection>
+
+        </section>
+
+        <section xml:id="sec-counting-trees"><title>Counting Trees</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+      </chapter>
+
+      <chapter xml:id="ch-2"><title>Chapter 2</title>
+
+        <section xml:id="sec-recurrence"><title>Recurrence Relations</title>
+
+          <p></p>
+          
+        </section>
+
+        <section xml:id="sec-char-eq"><title>Characteristic Equations</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section xml:id="sec-gen-fun"><title>Generating Functions</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section xml:id="sec-ord-gen-fun"><title>Ordinary Generating Functions</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-3"><title>Chapter 3</title>
+
+        <section><title>Permutation Statistics</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>Operations and Summations</title>
+
+          <subsection xml:id="subsec-convolutions"><title>Convolutions</title>
+
+            <p>
+              
+            </p>
+            
+          </subsection>
+
+          <subsection xml:id="subsec-snake-oil"><title>Snake Oil</title>
+            
+            <p>
+              
+            </p>
+
+          </subsection>
+          
+        </section>
+
+        <section><title>Exponential Generating Functions</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>Sterling Numbers</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>The Exponential Formula</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>Involutions, Partitions, and Diagrams</title>
+
+          <subsection xml:id="subsec-involutions"><title>Involutions</title>
+
+            <p>
+              
+            </p>
+            
+          </subsection>
+
+          <subsection><title>Integer Partitions</title>
+            
+            <p>
+              
+            </p>
+
+          </subsection>
+
+          <subsection xml:id="subsec-ferrers-diagrams"><title>Ferrers Diagrams</title>
+
+            <p>
+              
+            </p>
+            
+          </subsection>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-4"><title>Chapter 4</title>
+
+        <section><title>Inclusion Exclusion</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>Counting Under Symmetry</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>Distribution Methods</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+        
+      </chapter>
+
+      <chapter xml:id="ch-coding-theory"><title>Coding Theory</title>
+
+        <section><title>Channel Coding</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>Decoding</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>Standard Array and Syndrome Coding</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+        <section><title>MDS, Reed-Solomon Codes, and Polynomial Interpretation of GRS Codes</title>
+
+          <p>
+            
+          </p>
+          
+        </section>
+
+
+        
+      </chapter>
+
+    </part>
+
+    <backmatter xml:id="backmatter"><title>Backmatter</title>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>

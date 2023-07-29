@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="hiddenproof"><h3 class="heading"><span class="type">Proof</span></h3>
+<div class="para logical"><ol class="decimal">
+<li>
+<div class="para">We convert the problem to the case of counting solutions in nonnegative integers.</div>
+<div class="para">Consider <span class="process-math">\(x_1+\cdots+x_n=k\)</span> where <span class="process-math">\(x_i&gt;0\text{.}\)</span> Now let <span class="process-math">\(y_i=x_i-1\)</span> for <span class="process-math">\(i=1,\dots,n\text{.}\)</span> So <span class="process-math">\(y_i\geq 0\text{.}\)</span> The solutions to <span class="process-math">\(\sum_{i=1}^n x_i=k\)</span> corresponds to solutions of <span class="process-math">\(\sum_{i=1}^n y_i=k-n\)</span> in nonnegative integers.</div>
+<div class="para">(To see this, <span class="process-math">\(\sum_{i=1}^n x_i=\sum_{i=1}^n (y_i+1)=k\)</span> so <span class="process-math">\(x_1,\dots,x_n\)</span> is a solution for <span class="process-math">\(\sum_{i=1}^n y_i=k-n\text{.}\)</span>)</div>
+<div class="para">There are <span class="process-math">\(\binom{k-n+n-1}{n-1}\)</span> such solutions, which is <span class="process-math">\(\binom{k-1}{n-1}\text{.}\)</span>
+</div>
+</li>
+<li>
+<div class="para">Use stars and bars.</div>
+<div class="para">The number of solutions in positive integers corresponds to an arrangement of <span class="process-math">\(k\)</span> stars and <span class="process-math">\(n-1\)</span> bars where no two bars can occur consecutively. Place the <span class="process-math">\(k\)</span> stars. There are <span class="process-math">\(k-1\)</span> positions between the stars where bars may be placed. So the number of arrangements is <span class="process-math">\(\binom{k-1}{n-1}\)</span>
+</div>
+</li>
+</ol></div></article><span class="incontext"><a href="sec-perm-comb.html#proof-7" class="internal">in-context</a></span>
+</body>
+</html>
